@@ -1,2 +1,37 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=17630375&assignment_repo_type=AssignmentRepo)
-# INF 6420 - Intro to Web Development
+# Maryalice Taneyhill's INF6420 Project
+
+A portfolio site showcasing my work. 
+
+## Wireframes
+
+This is a sketch of how I am planning to construct my portfolio. 
+
+![Wireframe of Home Page](wireframes/Home%20Page.jpg)
+
+Header - Will include my navigation menu, name, and image
+
+Navigation Menu - Will include links to other pages - my work and contact information
+
+Main Content - Will introduce myself and include images and description.
+
+Footer - will include contact information and links to social media.
+
+![Wireframe of Work Page](wireframes/Work%20Page.jpg)
+
+Header - Will include navigation menu and page title
+
+Navigation Menu - Will include links to other pages - home and contact information
+
+Main Content - Will include images and descriptions of notable pieces of work 
+
+Footer - will include contact information and links to social media.
+
+![Wireframe of Work Page](wireframes/Contact.jpg)
+
+Header - Will include my navigation menu, name, and image
+
+Navigation Menu - Will include links to other pages - my work and home page. 
+
+Main Content - My resume and contact information with an image
+
+Footer - will include contact information and links to social media.
