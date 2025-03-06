@@ -211,29 +211,71 @@ footer {
     border: 8px solid #272726;
     padding: 10px;
 }
-.resumetext-container {
+
+     .form {
+        width: 100%;
+        margin:3em auto;
+        position: absolute;
+        left: 40%;
+        margin-top: 70px;
+        text-align: center; 
+    }
+    .label {
+        display: block;
+        font-weight: 700;
+        margin-bottom: 0.5em;
+    }
+.form-input {
+    border: 2px solid rgb(6, 66, 6);
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 1em;
+    margin-bottom: 1.5em;
+    width: 100%;
+}
+.form-input:focus {
+    outline: none;
+    border: 2px solid #272726;
+} 
+[type="submit"] {
+    background: #FFBD59;
+    color: rgb(6, 66, 6);
+    width:100%;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 8;
+    border-color: rgb(6, 66, 6);
+    border-radius: 4px;
+    padding: .5em;
+    cursor: pointer;
+  }
+  [type="submit"]:hover,
+  [type="submit"]:focus {
+    background-color: #cf7d02;
+  }
+
+     textarea {
+        height: 150px;
+        resize: vertical;
+     } 
+.contactmain {
+    padding-top: 2rem;
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    align-items: center;
-    height: 100vh;
-    margin-top: 12%;
-}
-.resumetext-container p {
-    max-width: 30%;
-    height:auto;
-    border: 8px solid rgb(6, 66, 6);
-    padding: 10px;
-}
-.resumetext-container img {
-    max-width: 30%;
-    height:auto;
-    border: 8px solid #272726;
-    padding: 10px;
     align-items: center;
     justify-content: center;
-    float: center;
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 200px;
+    left: 56%;
+    margin-bottom: 2rem;
 }
-.resumetext-container span{
-    clear: center; display: block;
+.error {
+    border-color: red;
+}
+.error-message {
+    color: red;
+    margin:-1em 0 1.5em;
 }
