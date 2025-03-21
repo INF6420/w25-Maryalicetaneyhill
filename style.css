@@ -145,92 +145,6 @@ header {
     margin: 3em auto;
     text-align: center;
 }
-<<<<<<< Updated upstream
-.workimage-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    align-items: center;
-    height: 150vh;
-    bottom: 200px;
-    margin-bottom: -40%;
-}
-.workimage-container img {
-    max-width: 40%;
-    height:auto;
-    border: 8px solid rgb(6, 66, 6);
-    padding: 10px;
-}
-.worktext-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    align-items: center;
-    height: 150vh;
-    margin-bottom: -40%;
-}
-.worktext-container p {
-    max-width: 40%;
-    height:auto;
-    border: 8px solid #272726;
-    padding: 10px;
-}
-.bottomworkimage-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    align-items: center;
-    height: 150vh;
-    bottom: 200px;
-    margin-top: -40%;
-}
-.bottomworkimage-container img {
-    max-width: 40%;
-    height:auto;
-    border: 8px solid rgb(6, 66, 6);
-    padding: 10px;
-}
-.bottomworktext-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    align-items: center;
-    height: 150vh;
-    margin-top: -40%;
-    margin-bottom: -20%;
-}
-.bottomworktext-container p {
-    max-width: 40%;
-    height:auto;
-    border: 8px solid #272726;
-    padding: 10px;
-}
-.resumetext-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    align-items: center;
-    height: 100vh;
-    margin-top: 12%;
-}
-.resumetext-container p {
-    max-width: 30%;
-    height:auto;
-    border: 8px solid rgb(6, 66, 6);
-    padding: 10px;
-}
-.resumetext-container img {
-    max-width: 30%;
-    height:auto;
-    border: 8px solid #272726;
-    padding: 10px;
-    align-items: center;
-    justify-content: center;
-    float: center;
-}
-.resumetext-container span{
-    clear: center; display: block;
-=======
 .form-input {
     border: 2px solid rgb(6, 66, 6);
     border-radius: 4px;
@@ -300,5 +214,4 @@ footer {
         left: 5px;  
         max-width: 50px;
     }
->>>>>>> Stashed changes
 }
