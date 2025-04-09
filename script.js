@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
     const menuButton = document.querySelector(".menu-button");
     const menuContainer = document.querySelector(".menu-container");
@@ -28,9 +29,11 @@ var hasError = function (field) {
 
         if (field.type === 'email') return 'Please enter an email address.';
 
+
         if (field.type === 'url') return 'Please enter a URL.';
 
     }
+
 
     if (validity.tooShort) return 'Please lengthen this text to ' + field.getAttribute('minLength') + ' characters or more. You are currently using ' + field.value.length + ' characters.';
 
@@ -48,23 +51,36 @@ var hasError = function (field) {
 
         if (field.hasAttribute('title')) return field.getAttribute('title');
 
+
         return 'Please match the requested format.';
 
     }
 
+
+    // If all else fails, return a generic catchall error
+  
     return 'The value you entered for this field is invalid.';
 
 };
+
 
 var showError = function (field, error) {
 
     field.classList.add('error');
  
+// Show an error message
+var showError = function (field, error) {
+
+    // Add error class to field
+    field.classList.add('error');
+  
+    // If the field is a radio button and part of a group, error all and get the last item in the group
     if (field.type === 'radio' && field.name) {
         var group = document.getElementsByName(field.name);
         if (group.length > 0) {
             for (var i = 0; i < group.length; i++) {
-                
+
+                // Only check fields in current form
                 if (group[i].form !== field.form) continue;
                 group[i].classList.add('error');
             }
@@ -75,12 +91,15 @@ var showError = function (field, error) {
     var id = field.id || field.name;
     if (!id) return;
 
+
     var message = field.form.querySelector('.error-message#error-for-' + id );
     if (!message) {
         message = document.createElement('div');
         message.className = 'error-message';
         message.id = 'error-for-' + id;
- 
+
+        
+        // If the field is a radio button or checkbox, insert error after the label
         var label;
         if (field.type === 'radio' || field.type ==='checkbox') {
             label = field.form.querySelector('label[for="' + id + '"]') || field.parentNode;
@@ -89,20 +108,31 @@ var showError = function (field, error) {
             }
         }
 
+
+        // Otherwise, insert it after the field
         if (!label) {
             field.parentNode.insertBefore( message, field.nextSibling );
         }
 
     }
 
+
     field.setAttribute('aria-describedby', 'error-for-' + id);
 
     message.innerHTML = error;
+    
+    // Add ARIA role to the field
+    field.setAttribute('aria-describedby', 'error-for-' + id);
 
+    // Update error message
+    message.innerHTML = error;
+
+    // Show error message
     message.style.display = 'block';
     message.style.visibility = 'visible';
 
 };
+
 
 var removeError = function (field) {
 
@@ -110,27 +140,53 @@ var removeError = function (field) {
  
     field.removeAttribute('aria-describedby');
 
+
+// Remove the error message
+var removeError = function (field) {
+
+    // Remove error class to field
+    field.classList.remove('error');
+    
+    // Remove ARIA role from the field
+    field.removeAttribute('aria-describedby');
+
+    // If the field is a radio button and part of a group, remove error from all and get the last item in the group
     if (field.type === 'radio' && field.name) {
         var group = document.getElementsByName(field.name);
         if (group.length > 0) {
             for (var i = 0; i < group.length; i++) {
+
+                // Only check fields in current form
                 if (group[i].form !== field.form) continue;
                 group[i].classList.remove('error');
             }
             field = group[group.length - 1];
         }
     }
+
     var id = field.id || field.name;
     if (!id) return;
 
     var message = field.form.querySelector('.error-message#error-for-' + id + '');
     if (!message) return;
 
+
+    // Get field id or name
+    var id = field.id || field.name;
+    if (!id) return;
+    
+
+    // Check if an error message is in the DOM
+    var message = field.form.querySelector('.error-message#error-for-' + id + '');
+    if (!message) return;
+
+    // If so, hide it
     message.innerHTML = '';
     message.style.display = 'none';
     message.style.visibility = 'hidden';
 
 };
+
 
 
 document.addEventListener('blur', function (event) {
@@ -144,9 +200,11 @@ document.addEventListener('blur', function (event) {
         return;
     }
 
+    // Otherwise, remove any existing error message
     removeError(event.target);
 
 }, true);
+
 
 
 document.addEventListener('submit', function (event) {
@@ -154,6 +212,7 @@ document.addEventListener('submit', function (event) {
     if (!event.target.classList.contains('validate')) return;
 
     var fields = event.target.elements;
+
 
     var error, hasErrors;
     for (var i = 0; i < fields.length; i++) {
@@ -166,10 +225,17 @@ document.addEventListener('submit', function (event) {
         }
     }
 
+    // If there are errrors, don't submit form and focus on first element with error
     if (hasErrors) {
         event.preventDefault();
         hasErrors.focus();
     }
 
+
 }, false);
 
+
+    // Otherwise, let the form submit normally
+    // You could also bolt in an Ajax form submit process here
+
+}, false);
