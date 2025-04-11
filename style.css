@@ -48,7 +48,7 @@ header {
     z-index: 1000;
 }
 .menu-button {
-    background-color: rgb(6, 66, 6);
+    background-color: #cf7d02;
     color: black;
     padding: 10px 15px;
     border: none;
@@ -212,5 +212,5 @@ footer {
 @media (max-width: 480px) {
     .logo {
         left: 5px;  
-        max-width: 50px;
-    }
+        max-width: 50px;}
+        
